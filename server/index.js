@@ -2,10 +2,10 @@ var express = require('express');
 var expressLayouts = require('express-ejs-layouts');
 var app = express();
 
-app.use(express.static('../client/public'));
+app.use(express.static(__dirname + '../client/public'));
 app.use(expressLayouts);
 
-app.set('views', '../client/views');
+app.set('views', __dirname + '/../client/views');
 app.set('view engine', 'ejs');
 
 // Registering views
@@ -18,6 +18,6 @@ app.get('/calendrier-reservation',  function(req, res) { res.render('calendrier-
 app.get('/reserver',                function(req, res) { res.render('reserver',                 { page: 'book', title: 'Réserver' }); });
 app.get('/contact',                 function(req, res) { res.render('contact',                  { page: 'cont', title: 'Contact' }); });
 
-app.listen(6700, function () {
+app.listen(7700, function () {
     console.log('Listening on port 6700.');
 });
