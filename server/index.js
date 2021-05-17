@@ -19,5 +19,5 @@ app.get('/reserver',                function(req, res) { res.render('reserver', 
 app.get('/contact',                 function(req, res) { res.render('contact',                  { page: 'cont', title: 'Contact' }); });
 
 app.listen(7700, function () {
-    console.log('Listening on port 6700.');
+    console.log('Listening on port 7700.');
 });
